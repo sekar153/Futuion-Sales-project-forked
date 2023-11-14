@@ -50,7 +50,7 @@ jobs:
     - name: Build, tag, and push image to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: futuion-java
+        ECR_REPOSITORY: backend-application
         IMAGE_TAG: latest
       run: |
         docker build --file ./futuionsales/Dockerfile -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
